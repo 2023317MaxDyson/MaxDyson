@@ -7,6 +7,7 @@ agent only
             image '22.11.0-bullseye'
             reuseNode true
          }
+       }
          steps{
             sh '''
             ls -la
@@ -17,7 +18,6 @@ agent only
             ls -la
             '''
          }
-        } 
      }
      stage('Test'){
        agent{
@@ -25,6 +25,7 @@ agent only
             image '22.11.0-bullseye'
             reuseNode true
          }
+       }
          steps{
             sh '''
             test -f build/index.html
@@ -32,7 +33,6 @@ agent only
          
             '''
          }
-        } 
      }
   }
 }
