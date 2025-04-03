@@ -30,7 +30,6 @@ agent any
             sh '''
             test -f build/index.html
             npm text
-         
             '''
          }
      }
